@@ -1,0 +1,84 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Body Styling */
+  body {
+    background-color: #f3f4f6; /* Warna abu-abu terang */
+    color: #333; /* Warna teks utama */
+    line-height: 1.6;
+  }
+  
+  /* Container */
+  .dikemas {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff; /* Warna putih untuk card utama */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    text-align: center;
+  }
+  
+  /* Judul Utama */
+  .dikemas h1 {
+    color: #00a8e8; /* Biru terang */
+    margin-bottom: 20px;
+  }
+  
+  /* Detail Pesanan */
+  .order-details {
+    margin: 20px 0;
+  }
+  
+  .order-details h2 {
+    color: #2c3e50; /* Biru tua */
+    margin-bottom: 15px;
+  }
+  
+  .order-details img {
+    border-radius: 8px;
+    margin: 10px 0;
+  }
+  
+  .order-details p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #333;
+  }
+  
+  /* Status Pesan */
+  .status-message {
+    background-color: #ecf0f1; /* Abu-abu muda */
+    border-left: 5px solid #3498db; /* Garis biru di kiri */
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    color: #2c3e50; /* Warna teks */
+  }
+  
+  .status-message p {
+    margin: 5px 0;
+  }
+  
+  /* Tombol Kembali */
+  .back-home {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #00a8e8; /* Biru terang */
+    color: #fff; /* Teks putih */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .back-home:hover {
+    background-color: #007bb5; /* Biru lebih gelap saat hover */
+  }
+  

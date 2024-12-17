@@ -1,0 +1,386 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f3f4f6;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  position: sticky; /* Membuat header tetap menempel */
+  top: 0; /* Header berada di bagian atas layar */
+  z-index: 1000; /* Header akan tampil di atas elemen lain */
+  background-color: #2d2f3b; /* Menjaga warna background */
+  color: white; /* Menjaga warna teks */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  margin-bottom: 15px;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00a8e8;
+}
+
+header .search-bar {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin-left: 350px;
+}
+
+header .search-bar input {
+  /* width: 100%; */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 350px;
+}
+
+header .search-bar button {
+  background-color: #00a8e8;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+header .user-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header .user-menu a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header .user-menu i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+header .user-menu p {
+  margin: 0;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  background: linear-gradient(to right, #3498db, #2ecc71);
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 12px 20px;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background: #c0392b;
+}
+
+/* Category Section */
+.categories {
+  margin: 20px;
+}
+
+.categories h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 60px;
+  margin: 20px 90px 0px 120px;
+}
+
+
+.category-card {
+  width: 200px; /* Lebar tetap untuk setiap kolom */
+  max-width: 200px; /* Membatasi lebar maksimum */
+  /* text-align: center; */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: #2c3e50;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.category-card:hover {
+  background-color: #3498db;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.category-card i {
+  font-size: 2rem;
+  color: #00a8e8;
+  margin-bottom: 10px;
+}
+
+.category-card p {
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Featured Products */
+.featured {
+  margin: 20px;
+}
+
+.featured h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+h2{
+  text-align: center;
+}
+
+/* Grid container untuk produk */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+/* Kartu produk */
+.product-card {
+    width: 200px; /* Lebar tetap untuk setiap kolom */
+    max-width: 200px; /* Membatasi lebar maksimum */
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.product-card p {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.buy-button {
+    display: inline-block;
+    background-color: #00a8e8;
+    color: #fff;
+    padding: 3px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.buy-button:hover {
+    background-color: #007bb5;
+}
+
+/* User Menu */
+.user-menu {
+  position: relative;
+}
+
+.user-menu:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1000;
+  width: 150px;
+  text-align: left;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  border-bottom: 1px solid #f4f4f9;
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+  background: #f4f4f9;
+  color: #27ae60;
+}
+
+/* Cart */
+.cart {
+  color: white;
+}
+
+.cart:hover {
+  color: #00a8e8;
+}
+
+footer { 
+  text-align: center; 
+  padding: 10px; 
+  background: #2c3e50; 
+  color: #fff; 
+  /* position: relative;  */
+  width: 100%; 
+  bottom: 0; 
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header .search-bar {
+    width: 60%;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+/* Responsif Header */
+@media (max-width: 992px) { /* Tablet */
+  header {
+    flex-direction: column; /* Header berlapis */
+    padding: 10px;
+    text-align: center;
+  }
+
+  header .logo {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  header .search-bar {
+    width: 90%;
+  }
+
+  header .search-bar input {
+    width: 70%;
+  }
+
+  header .user-menu {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) { /* Mobile */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  header .logo {
+    font-size: 1.4rem;
+  }
+
+  header .search-bar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  header .search-bar input {
+    width: 80%; /* Lebar input mengecil */
+  }
+
+  header .search-bar button {
+    padding: 8px 10px; /* Tombol pencarian lebih kecil */
+  }
+
+  header .user-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .dropdown-menu {
+    width: 120px; /* Dropdown lebih kecil */
+    font-size: 12px;
+  }
+
+  .categories-grid {
+    margin: 20px; /* Menyederhanakan jarak */
+  }
+}
+
+@media (max-width: 480px) { /* Smartphone kecil */
+  header .search-bar input {
+    width: 100%;
+  }
+
+  header .search-bar button {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .hero h1 {
+    font-size: 28px; /* Teks hero lebih kecil */
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+}
+

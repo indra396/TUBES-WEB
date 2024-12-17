@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.dashboard-container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    background-color: #34495e;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #1abc9c;
+}
+
+.sidebar .logout {
+    color: #e74c3c;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.main-content header {
+    margin-bottom: 20px;
+}
+
+.main-content h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.user-management table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-management table th,
+.user-management table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.user-management table th {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.user-management table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.user-management table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-detail,
+.btn-delete {
+    padding: 5px 10px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn-detail {
+    background-color: #3498db;
+}
+
+.btn-edit:hover {
+    background-color: #2980b9;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+}

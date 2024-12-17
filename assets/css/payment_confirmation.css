@@ -1,0 +1,108 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Header */
+  header {
+    background-color: #1a73e8;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+  }
+  
+  header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  header .user-menu p {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  /* Main content */
+  .payment-confirmation {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .payment-confirmation h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .payment-confirmation h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .payment-confirmation p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .payment-confirmation p strong {
+    color: #555;
+  }
+  
+  .payment-confirmation .order-details p {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .payment-confirmation .order-details p strong {
+    color: #1a73e8;
+  }
+  
+  /* Button */
+  button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #1a73e8;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  button a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  button:hover {
+    background-color: #1558b0;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .payment-confirmation {
+      padding: 20px;
+    }
+  
+    header .logo {
+      font-size: 1.5rem;
+    }
+  }
+  

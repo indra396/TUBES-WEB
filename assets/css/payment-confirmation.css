@@ -1,0 +1,107 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Body Styling */
+  body {
+    background-color: #f3f4f6; /* Latar belakang abu-abu terang */
+    color: #333; /* Warna teks utama */
+    line-height: 1.6;
+  }
+  
+  /* Container Styling */
+  .payment-confirmation {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff; /* Putih untuk kontainer */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    text-align: center;
+  }
+  
+  /* Judul Utama */
+  .payment-confirmation h1 {
+    color: #00a8e8; /* Biru terang */
+    margin-bottom: 20px;
+  }
+  
+  /* Informasi Rekening */
+  .account-info {
+    text-align: left;
+    margin-bottom: 20px;
+    border: 1px solid #ddd; /* Border ringan */
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #ecf0f1; /* Abu-abu muda */
+  }
+  
+  .account-info h2 {
+    color: #2c3e50; /* Biru tua */
+    margin-bottom: 10px;
+  }
+  
+  .account-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+  
+  /* Form Styling */
+  form {
+    text-align: left;
+    margin-top: 10px;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input[type="file"] {
+    display: block;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #00a8e8; /* Warna biru terang */
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #007bb5; /* Biru yang lebih gelap */
+  }
+  
+  /* Responsif untuk Mobile */
+  @media (max-width: 768px) {
+    .payment-confirmation {
+      margin: 20px;
+      padding: 15px;
+    }
+  
+    input[type="file"] {
+      font-size: 0.9rem;
+    }
+  
+    button {
+      width: 100%;
+      padding: 12px;
+    }
+  }
+  

@@ -1,0 +1,62 @@
+.checkout-page {
+    padding: 20px;
+}
+
+.checkout-page h2 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.cart-summary {
+    margin-bottom: 20px;
+}
+
+.cart-summary ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-summary li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.payment-info {
+    margin-top: 20px;
+}
+
+.payment-info label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.payment-info textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment-info select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.submit-payment {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-payment:hover {
+    background-color: #45a049;
+}
