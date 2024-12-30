@@ -4,8 +4,8 @@ include('../includes/db.php'); // Koneksi database
 
 // Mengecek apakah pengguna sudah login
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit();
+  header("Location: ../auth/login.php");
+  exit();
 }
 // Mendapatkan data pengguna
 $user_id = $_SESSION['user_id'];
@@ -22,146 +22,62 @@ $user = $result->fetch_assoc();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <style>
-    /* Reset */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Arial', sans-serif;
+  <title>ShopNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>  
+    /* Sembunyikan tanda dropdown di tampilan mobile */
+    @media (max-width: 768px) {
+      .user-details{
+        display: none; /* Sembunyikan logo dan nama pengguna */
       }
-
-      body {
-        background-color: #f3f4f6;
-        color: #333;
-        line-height: 1.6;
-      }
-
-      /* Sticky Header */
-      header {
-        position: sticky; /* Membuat header tetap menempel */
-        top: 0; /* Header berada di bagian atas layar */
-        z-index: 1000; /* Header akan tampil di atas elemen lain */
-        background-color: #2d2f3b; /* Menjaga warna background */
-        color: white; /* Menjaga warna teks */
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
-        margin-bottom: 15px;
-      }
-
-
-      header .logo {
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: #00a8e8;
-      }
-
-      header .search-bar {
-        display: flex;
-        align-items: center;
-        width: 50%;
-      }
-
-      header .search-bar input {
-        /* width: 100%; */
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        margin-right: 10px;
-      }
-
-      header .search-bar button {
-        background-color: #00a8e8;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-      }
-
-      header .user-menu {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-      }
-
-      header .user-menu a {
-        text-decoration: none;
-        font-weight: bold;
-      }
-
-      header .user-menu i {
-        font-size: 20px;
-        /* cursor: pointer; */
-      }
-
-      header .user-menu p {
-        margin: 0;
-      }
-
-
-      /* User Menu */
-      .user-menu {
-        position: relative;
-        cursor: pointer;
-      }
-
-      .user-menu:hover .dropdown-menu {
-        display: block;
-      }
-
       .dropdown-menu {
+        display: block; /* Pastikan dropdown tetap terlihat */
+        position: static; /* Tampilkan dalam tata letak biasa */
+        box-shadow: none; /* Hilangkan bayangan */
+      }
+      span{
         display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background: #fff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        z-index: 1000;
-        width: 150px;
-        text-align: left;
       }
 
-      .dropdown-menu a {
-        display: block;
-        padding: 10px;
-        color: #333;
-        text-decoration: none;
-        font-size: 14px;
-        border-bottom: 1px solid #f4f4f9;
-      }
-
-      .dropdown-menu a:last-child {
-        border-bottom: none;
-      }
-
-      .dropdown-menu a:hover {
-        background: #f4f4f9;
-        color: #27ae60;
-      }
+    }
+    .nav-link.dropdown-toggle::after {
+        display: none; /* Menyembunyikan tanda segitiga */
+    }
   </style>
-</head>
+</head> 
 <body>
-<header>
-  <div class="logo">ShopNest</div>
-  <div class="user-menu">
-    <i class="fas fa-user-circle"></i>
-    <p class="user-name"><?php echo htmlspecialchars($user['full_name']); ?></p>
-    
-    <div class="dropdown-menu">
-      <a href="dashboard.php">Beranda</a>
-      <a href="riwayat.php">Riwayat Pesanan</a>
-      <a href="profile_settings.php">Akun Saya</a>
-      <a href="../index.php">Logout</a>
+<header class="navbar navbar-expand-lg bg-light sticky-top p-3 shadow-sm">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold" href="#">ShopNest</a>
+
+      <!-- Toggle button for mobile view -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- User Menu -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-flex align-items-center user-details" href="#" id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span><i class="fas fa-user-circle me-2"></i></span>
+              <span><?php echo htmlspecialchars($user['full_name']); ?></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
+              <li><a class="dropdown-item" href="dashboard.php">Home</a></li>              
+              <li><a class="dropdown-item" href="riwayat.php">Riwayat Pesanan</a></li>
+              <li><a class="dropdown-item" href="profile_settings.php">Akun Saya</a></li>
+              <li><a class="dropdown-item" href="../auth/logout.php">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</header> 
+  </header>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
